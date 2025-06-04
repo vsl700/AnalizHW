@@ -2,6 +2,7 @@ package org.demu.models;
 
 import lombok.*;
 
+import java.time.Instant;
 import java.util.Date;
 
 @Getter
@@ -17,7 +18,7 @@ public class Item {
     private String description;
     @NonNull
     private String picLink;
-    private Date dateAdded;
+    private Date dateAdded = Date.from(Instant.now());
     @NonNull
     private double price;
     private boolean available = true;
